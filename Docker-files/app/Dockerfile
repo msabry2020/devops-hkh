@@ -2,7 +2,7 @@ FROM openjdk:11 AS BUILD_IMAGE
 RUN apt update && \
     apt install maven -y && \
     git clone -b docker https://github.com/devopshydclub/vprofile-project.git && \
-    mvn install
+    cd devops-hkh && mvn install
 
 
 FROM tomcat:9-jre11
