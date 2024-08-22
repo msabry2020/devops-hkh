@@ -42,3 +42,7 @@ services:
     environment:
       - RABBITMQ_DEFAULT_USER=guest
       - RABBITMQ_DEFAULT_PASS=guest
+
+volumes:
+  vprodbdata: {}
+  vproappdata: {}
