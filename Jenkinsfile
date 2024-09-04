@@ -67,7 +67,7 @@ pipeline{
             slackSend(
                 channel: "#cicd", 
                 color: COLOR_MAP[currentBuild.currentResult],
-                message: "*${currentBuild.currentResult}* job ${env.JOB_NAME} build ${env.BUILD_ID} \n"
+                message: "*${currentBuild.currentResult}* job ${env.JOB_NAME} build ${env.BUILD_ID} \n ${BUILD_URL}"
                 )
         }
     }
