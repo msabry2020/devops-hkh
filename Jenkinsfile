@@ -67,9 +67,10 @@ pipeline{
             steps{
                 script{
                     dockerImage = docker.build(REGISTRY + ":$BUILD_NUMBER",
-                                                          "./Docker-files/app/", 
                                                           "--build-arg BUILD_ID=${env.BUILD_ID}", 
-                                                          "--build-arg BUILD_TIMESTAMP=${env.BUILD_TIMESTAMP}")
+                                                          "--build-arg BUILD_TIMESTAMP=${env.BUILD_TIMESTAMP}",
+                                                          "./Docker-files/app/")
+
                 }
             }
         }
